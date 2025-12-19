@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%; 
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* kalau mau center horizontal */
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  
+  background: url('/images/bgauth.jpeg') no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  min-height: 100vh;   /* tinggi penuh layar, tapi tidak memaksa */
+}
+
+.bg-image {
+  
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 800px;
+  padding: 15px;
+  margin: auto;
+}
+
+

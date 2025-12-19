@@ -1,0 +1,206 @@
+.peminjaman-wrapper {
+    height: calc(100vh - 110px); 
+    overflow-y: auto;
+    padding-bottom: 40px;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    padding: 20px 0;
+    align-items: flex-start;
+}
+
+.main-panel {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.main-panel h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.form-box label,
+.detail-section label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-box input,
+.detail-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    margin-bottom: 15px;
+}
+
+.form-box .select-avail {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.table-title {
+    margin: 25px 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.book-table {
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+/* GRID UTAMA TABEL */
+.book-row {
+    display: grid;
+    grid-template-columns: 40px 1fr 120px 90px;
+    align-items: center;
+    padding: 12px 15px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.book-row.header {
+    background: #f4f6ff;
+    font-weight: 700;
+    border-bottom: 2px solid #d0d5ff;
+}
+
+/* AREA BUKU (gambar + teks) */
+.book-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    min-width: 0; /* penting untuk ellipsis */
+}
+
+.book-info img {
+    width: 48px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* FIX TEKS PANJANG MENJADI ... */
+.book-info h5 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 490px;
+    font-size: 15px;
+}
+
+.book-info small {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 260px;
+}
+
+.book-row span.no-panggil {
+    max-width: 100px;        /* batas lebar */
+    display: block;          /* biar bisa wrap */
+    word-wrap: break-word;   /* pecah teks panjang */
+    white-space: normal;     /* boleh turun baris */
+}
+
+
+
+/* BUTTON HAPUS */
+.hapus-btn {
+    background: #ff4b4b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar-detail {
+    width: 260px;
+    background: white;
+    padding: 20px 22px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    height: fit-content;
+    border-top: 4px solid #2f6bff;
+}
+
+.sidebar-detail h2 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.sidebar-detail .detail-section {
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+.sidebar-detail .detail-section:last-child {
+    border-bottom: none;
+}
+
+.sidebar-detail .detail-value strong {
+    font-weight: 500;
+}
+
+.detail-section small {
+    color: #666;
+    line-height: 1.4;
+}
+
+/* TOMBOL KONFIRM */
+.btn-konfirmasi {
+    width: 100%;
+    background: #2f6bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sidebar-detail {
+        width: 100%;
+    }
+
+    .book-row {
+        grid-template-columns: 30px 1fr 80px 70px;
+    }
+
+    .book-info h5,
+    .book-info small {
+        max-width: 180px;
+    }
+}

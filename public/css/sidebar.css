@@ -1,0 +1,116 @@
+/* ================= SIDEBAR ================= */
+
+.sidebar-filter {
+    width: 260px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    height: fit-content;
+    margin-top: 40px;         
+    border-top: 4px solid #2f6bff; 
+    /* perbaikan */
+    flex-shrink: 1; 
+}
+
+.sidebar-filter h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 4px solid #ddd;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #ddd;
+}
+
+.filter-section:last-child {
+    border-bottom: none;
+}
+
+.filter-section label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.filter-input {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+.filter-list label {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 5px;
+    font-weight: 400 !important;
+}
+
+.filter-btn {
+    width: 100%;
+    background: #2f6bff;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.filter-btn:hover {
+    background: #1e50cc;
+}
+
+.koleksi-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    /* cegah overflow */
+    overflow-x: hidden;
+}
+.toggle-bahasa {
+    margin-top: 5px;
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+/* --- RESPONSIVE FIX untuk mobile --- */
+@media (max-width: 768px) {
+    .koleksi-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sidebar-filter {
+        width: 100%;
+    }
+}
+
+/* Semua label item filter (checkbox / radio) jadi normal */
+.sidebar-filter label input {
+    font-weight: normal !important;
+}
+
+.sidebar-filter label {
+    font-weight: normal !important;
+}
+
+/* Judul section (label pertama dalam setiap filter-section) */
+.filter-section > label:first-child {
+    font-weight: bold !important;
+    margin-bottom: 6px;
+    display: block;
+}
+
+

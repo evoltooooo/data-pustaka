@@ -1,0 +1,190 @@
+.book-cover-wrapper {
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.book-cover-img {
+    border-radius: 4px;
+}
+
+.book-info-detail .text-muted {
+    font-size: 0.9rem;
+}
+
+.book-info-detail>div {
+    line-height: 1.4;
+}
+
+.detail-hero {
+    height: 220px;
+    background-image: url("/images/perpus.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.detail-search-box {
+    max-width: 800px;
+    margin: 0 auto;
+    transform: translateY(40%);
+}
+
+.detail-search-box .input-group-lg .form-control,
+.detail-search-box .input-group-lg .btn {
+    border-radius: 0;
+}
+
+.detail-search-box .input-group {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.star {
+    font-size: 32px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star.selected,
+.star.hovered {
+    color: gold;
+}
+
+.history-delete {
+    font-size: 22px;
+    cursor: pointer;
+    color: #888;
+    border-radius: 4px;
+    transition: 0.15s ease;
+    user-select: none;
+}
+
+.history-delete:hover {
+    color: #e63946;
+}
+
+.search-wrapper {
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    position: relative;
+}
+
+.book-hero {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+}
+
+#searchSuggest,
+#searchHistory {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    z-index: 1050;
+}
+
+#searchSuggest .list-group-item,
+#searchHistory .list-group-item {
+    text-align: left;
+    white-space: normal;
+    word-break: break-word;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#searchSuggest .suggest-cover {
+    width: 32px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+#searchSuggest .suggest-title {
+    text-align: left;
+    white-space: normal;
+    word-break: break-word;
+}
+
+
+
+
+
+
+
+
+/* .rating {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+}
+
+.rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.rating label:last-child {
+    position: static;
+}
+
+.rating label:nth-child(1) {
+    z-index: 5;
+}
+
+.rating label:nth-child(2) {
+    z-index: 4;
+}
+
+.rating label:nth-child(3) {
+    z-index: 3;
+}
+
+.rating label:nth-child(4) {
+    z-index: 2;
+}
+
+.rating label:nth-child(5) {
+    z-index: 1;
+}
+
+.rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.rating label .icon {
+    float: left;
+    color: transparent;
+}
+
+.rating label:last-child .icon {
+    color: #000;
+}
+
+.rating:not(:hover) label input:checked~.icon,
+.rating:hover label:hover input~.icon {
+    color: #ffa904;
+}
+
+.rating label input:focus:not(:checked)~.icon:last-child {
+    color: #000;
+    text-shadow: 0 0 5px #ffa904;
+} */

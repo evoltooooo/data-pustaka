@@ -1,0 +1,104 @@
+/* footer */
+.footer-nav a {
+    position: relative;
+    display: block;
+    padding-left: 0;
+}
+
+.footer-nav a::before {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-8px);
+    opacity: 0;
+    transition: all .2s ease;
+    color: #fff;
+}
+
+.footer-nav a:hover::before {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+}
+
+/*contact*/
+.contact-item {
+    color: white;
+    font-size: 14px;
+    margin: 4px 0;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+
+/*preview sosmed*/
+.social-icon {
+    position: relative;
+    float: left;
+    width: 58px;
+    margin-right: 16px;
+}
+
+.social-icon img {
+    width: 58px;
+    border-radius: 8px;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.social-icon:hover img {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .25);
+}
+
+.social-preview {
+    position: absolute;
+    left: 50%;
+    top: 75px;
+    transform: translateX(-50%);
+    width: 180px;
+    background: rgba(255, 255, 255, 0.97);
+    color: #1f2937;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 13px;
+    line-height: 1.35;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+    z-index: 1000;
+}
+
+.social-preview::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-bottom-color: rgba(255, 255, 255, 0.97);
+}
+
+.social-icon:hover .social-preview {
+    opacity: 1;
+    transform: translateX(-50%) translateY(6px);
+}
+
+.social-preview .thumb {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: unset !important;
+    /* supaya tidak membatasi tinggi */
+    object-fit: cover !important;
+    margin-bottom: 0 !important;
+}
+
+
+.contact-icon {
+    width: 16px;
+    text-align: center;
+}

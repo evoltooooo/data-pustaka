@@ -1,0 +1,47 @@
+.fadein {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Caption with black fade gradient */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: auto;
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 500;
+    color: white;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.7) 35%,
+        rgba(0, 0, 0, 0.3) 65%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}

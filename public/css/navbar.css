@@ -1,0 +1,99 @@
+.main-header,
+.main-header.navbar,
+.navbar {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+/*buat nama web*/
+.site-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    transition: color 0.3s ease;
+}
+
+.site-title:hover {
+    color: #ffd166;
+}
+
+/*buat beranda*/
+.navbar-nav .nav-link {
+    color: #ffffff;
+    position: relative;
+    margin: 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff;
+    background-color: #2f6382;
+}
+
+.navbar-nav .nav-item.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: #333;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #2f6382;
+    color: #fff;
+}
+
+#userDropdown::after {
+    content: none !important;
+}
+
+.navbar.navbar-light .navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar.navbar-light .navbar-nav .nav-link:hover,
+.navbar.navbar-light .navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background-color: #2f6382;
+}
+
+.navbar .nav-item.no-arrow .dropdown-menu {
+    min-width: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.navbar .nav-item.dropdown:not(.no-arrow) .dropdown-menu {
+    left: 50% !important;
+    transform: translateX(-50%);
+    min-width: 160px;
+    border-radius: 8px;
+}
+
+.navbar .dropdown-menu {
+    padding: 0 !important;
+    right: auto !important;
+    margin-top: 6px;
+    left: 50% !important;
+
+    transform: translateX(-50%);
+    margin-top: 6px;
+}
+
+#userDropdown+.dropdown-menu {
+    left: 50% !important;
+    right: 90% !important;
+    transform: translateX(-50%);
+    margin-top: 6px;
+}

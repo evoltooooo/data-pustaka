@@ -1,0 +1,61 @@
+
+.jumbotron {
+  background: url('../images/perpus.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 100px 20px;
+  border-radius: 0;
+  margin: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  text-align: center;
+}
+
+
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+
+.jumbotron h1,
+.jumbotron .lead {
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.jumbotron h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.jumbotron .lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #f8f9fa;
+}
+
+
+@media (max-width: 768px) {
+  .jumbotron {
+    padding: 60px 15px;
+  }
+
+  .jumbotron h1 {
+    font-size: 2rem;
+  }
+
+  .jumbotron .lead {
+    font-size: 1rem;
+  }
+}

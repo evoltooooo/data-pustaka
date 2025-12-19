@@ -1,0 +1,280 @@
+/* =========================================
+   HOME CARD — MATCH 100% WITH KOLEKSI GRID
+   ========================================= */
+.book-card-collection {
+    width: 100%;
+    min-height: 360px;          
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: 0.25s ease;
+    box-sizing: border-box;
+
+    /* Tambahan shadow default */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.book-card-collection:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+/* COVER — RATIO 3:4 */
+.cover-wrapper {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.cover-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* INFO BLOCK */
+.book-card-collection .info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+}
+
+/* Judul */
+.book-card-collection .title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.25;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: calc(1.25em * 2);
+    text-align: left;
+}
+
+
+
+/* Penulis */
+.book-card-collection .author {
+    font-size: 14px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    text-align: left !important;
+}
+
+/* RATING */
+.book-card-collection .rating {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+}
+
+.book-card-collection .rating i,
+.book-card-collection .rating .rating-star {
+    font-size: 18px;
+    color: #f7d35c !important;
+    text-shadow:
+        0px 1px 1px rgba(0,0,0,0.25),
+        0px 0px 4px rgba(255,220,80,0.9);
+}
+
+.book-card-collection .rating-star::before {
+    content: "\f005";
+}
+
+/* SPACING */
+.section-spacing {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* CATEGORY BUTTON */
+.category-btn {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.category-btn:hover {
+    background: #f5f5f5;
+    transform: scale(1.03);
+}
+
+/* =========================================
+   KATEGORI UTAMA
+   ========================================= */
+
+#kategori-section {
+    margin-top: 40px;
+}
+
+#kategori-section .kategori-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+/* RESET AGAR WARNA TIDAK KETIMPA */
+.kategori-card {
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+    background: none !important;         /* <-- FIX PALING PENTING */
+    box-shadow: 0 10px 12px rgba(0,0,0,0.15);
+
+}
+
+/* Hover */
+.kategori-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+}
+
+.kategori-card .icon {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 12px;
+    transition: transform 0.25s ease;
+}
+
+.kategori-card:hover .icon {
+    transform: scale(1.30);
+}
+.kategori-card p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* WARNA SESUAI HTML */
+.bg-purple { background: #e53935 !important; }
+.bg-blue   { background: #4285f4 !important; }
+.bg-yellow { background: #f4c430 !important; }
+.bg-green  { background: #4caf50 !important; }
+.bg-pink   { background: #ec407a !important; }
+.bg-orange { background: #fb8c00 !important; }
+.bg-red    { background: #af09a1 !important; }
+
+/* =========================================
+   MODAL KATEGORI
+   ========================================= */
+
+.kategori-modal {
+    display: none;                /* default tertutup */
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    backdrop-filter: blur(3px);
+
+    /* penting untuk center */
+    justify-content: center;
+    align-items: center;
+}
+
+/* kelas saat dibuka */
+.kategori-modal.show {
+    display: flex;
+}
+
+.kategori-modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 700px;
+    padding: 25px 30px;
+    border-radius: 18px;
+    height: 760px !important;
+    overflow: hidden !important;
+    animation: fadeIn 0.25s ease;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.kategori-close {
+    float: right;
+    font-size: 28px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.modal-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 25px;
+}
+
+.modal-grid .kategori-card {
+    width: 100%;
+    height: 140px;
+}
+
+button.kategori-card {
+    border: none !important;
+    outline: none !important;
+    
+}
+
+.kategori-close {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0;
+    margin: 0;
+    font-size: 32px;
+    line-height: 1;
+    color: #000; /* atau #fff tergantung background */
+    cursor: pointer;
+}
+
+/* Hilangkan semua state outline */
+.kategori-close:focus,
+.kategori-close:active,
+.kategori-close:hover {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+.book-card-collection .title,
+.book-card-collection .title:visited,
+.book-card-collection .title:hover,
+.book-card-collection .title:active {
+    color: #000 !important;
+    text-decoration: none !important;
+}
